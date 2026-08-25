@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-scripts/
+coverage/
+*.tgz
+.DS_Store
+*.log
+.tmp/
+.vscode/
+.idea/
+benchmarks/generated/1000*.md
+benchmarks/generated/10000*.md

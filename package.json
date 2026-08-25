@@ -1,0 +1,64 @@
+{
+  "name": "mdtablepack",
+  "version": "1.0.0",
+  "description": "Token-budgeted reads for Markdown tables, built for AI agents.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "author": "hoodbroskillson",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "markdown",
+    "gfm",
+    "table",
+    "cli",
+    "tokens",
+    "agents",
+    "llm",
+    "compact"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoodbroskillson/mdtablepack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoodbroskillson/mdtablepack/issues"
+  },
+  "homepage": "https://github.com/hoodbroskillson/mdtablepack#readme",
+  "files": [
+    "dist",
+    "scripts/ensure-mdtableops.mjs",
+    "LICENSE",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "mdtablepack": "./dist/cli.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/ensure-mdtableops.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "bench": "tsc -p tsconfig.bench.json && node dist-scripts/bench.js",
+    "prepack": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "mdtableops": "github:hoodbroskillson/mdtableops#v1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
