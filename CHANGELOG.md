@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 1.0.0 - 2026-08-25
+
+GitHub tag `v1.0.0`. Not published to npm yet.
+
 - `catalog PATH` lists tables in a file or directory of `.md` files
 - `query FILE` reads one table with projection, filters, cursor pagination, and `--max-tokens` / `--max-bytes` budgets
 - Compact one-line JSON default for agents; json / jsonl / tsv / markdown formats
